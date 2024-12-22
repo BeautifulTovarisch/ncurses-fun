@@ -82,6 +82,8 @@ int main(int argc, char* argv[argc]) {
   draw_menu(selection);
 
   noecho();
+
+  // Absolutely important that key is an int and not a char!
   int key;
   while ((key = getch()) != '\n') {
     selection = update_selection(selection, key);
